@@ -10,7 +10,7 @@ class ChessValidator {
     parseFEN(fen) {
         const parts = fen.split(' ');
         const position = parts[0];
-        
+        //fen2
         let rank = 0;
         let file = 0;
         
@@ -51,6 +51,9 @@ class ChessValidator {
         this.halfMoveClock = parseInt(parts[4]);
         this.fullMoveNumber = parseInt(parts[5]);
     }
+
+    
+    getBoard(){return this.board.map(row => [...row]);} 
 
     makeMove(move) {
         const startFile = move.charCodeAt(0) - 'a'.charCodeAt(0);
@@ -193,7 +196,10 @@ async function main() {
     const question = (query) => new Promise((resolve) => rl.question(query, resolve));
 
     let chess = null;
-
+    
+        
+    
+    
     while (true) {
         if (chess === null) {
             const fen = await question('\nEnter FEN position (or \'exit\' to quit):\n');
@@ -244,3 +250,9 @@ async function main() {
 }
 
 main();
+
+
+module.exports = ChessValidator;
+
+
+
