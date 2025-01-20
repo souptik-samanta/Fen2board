@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chess Validator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="main-container">
+        <div class="sidebar">
+            <h3>Example Positions</h3>
+            <div class="fen-examples">
+                <div class="fen-example" data-fen="rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1">
+                    <h4>Starting Position</h4>
+                    <p>The standard chess starting position.</p>
+                    <button class="load-fen">Load Position</button>
+                </div>
+                
+                <div class="fen-example" data-fen="r3k2r/ppp2ppp/2n1bn2/2b1p3/2B1P3/2N1BN2/PPP2PPP/R3K2R w KQkq - 0 1">
+                    <h4>Development Complete</h4>
+                    <p>Both sides have developed their pieces.</p>
+                    <button class="load-fen">Load Position</button>
+                </div>
+
+                <div class="fen-example" data-fen="8/8/8/4k3/4P3/4K3/8/8 w - - 0 1">
+                    <h4>King and Pawn Endgame</h4>
+                    <p>Simple endgame position.</p>
+                    <button class="load-fen">Load Position</button>
+                </div>
+
+                <div class="fen-example" data-fen="r1bqkb1r/pppp1ppp/2n2n2/4p3/2B1P3/5N2/PPPP1PPP/RNBQK2R w KQkq - 0 1">
+                    <h4>Italian Game</h4>
+                    <p>Common opening position.</p>
+                    <button class="load-fen">Load Position</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="input-section">
+                <input type="text" id="fenInput" placeholder="Enter FEN notation">
+                <button id="initButton">Set Position</button>
+            </div>
+            
+            <div class="error" id="error"></div>
+            <div class="status" id="status">Enter FEN notation to start</div>
+            
+            <div class="board" id="board"></div>
+            
+            <div class="move-history" id="moveHistory">
+                <strong>Move History:</strong><br>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
