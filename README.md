@@ -1,147 +1,77 @@
-# Chess Validator
+# Fen2board
 
-A Node.js command-line tool for validating chess positions and moves using FEN (Forsyth–Edwards Notation) notation.
+Fen2board is a web application that allows users to visualize chess positions from Forsyth–Edwards Notation (FEN) strings. This tool is particularly useful for chess enthusiasts who want to analyze specific positions or share them with others.
 
 ## Features
 
-- Parse and validate FEN strings
-- Display chess positions in ASCII format
-- Make and validate chess moves
-- Track game state including:
-  - Current player's turn
-  - Castling rights
-  - En passant possibilities
-  - Move counters
-- Interactive command-line interface
-- Support for standard chess notation
+- **FEN Input**: Enter any valid FEN string to generate the corresponding chess board position.
+- **Interactive Board**: Visualize the chess board based on the provided FEN.
+- **Integration with Lichess**: Easily obtain FEN strings from your games on Lichess for analysis.
 
-## Installation
+## Getting Started
 
-1. Ensure you have Node.js installed on your system
-2. Clone this repository or create a new directory
-3. Create the required files:
-   - `chessValidator.js`
-   - `index.js`
-4. Install dependencies:
-```bash
-npm init -y
-```
+Follow these steps to use Fen2board:
 
-## Usage
+1. **Access the Application**:
+   - Open your web browser and navigate to [Fen2board](https://f2b.souptiks.hackclub.app/).
 
-1. Start the program:
-```bash
-node index.js
-```
+2. **Obtain FEN from Lichess**:
+   - Log in to your Lichess account.
+   - Navigate to your profile by clicking on your username at the top right corner.
+   - Select "Profile" from the dropdown menu.
+   - On your profile page, locate and click on "Chess Insights" on the right side of the screen.
+   - Within Chess Insights, you can analyze your games and obtain FEN strings for specific positions.
+     - For detailed guidance on using Lichess Chess Insights, refer to [The Ultimate Guide to Lichess Chess Insights](https://www.theschoolofrook.com/lichess-chess-insights/).
 
-2. Enter a FEN string when prompted. For example, use the starting position:
-```
-rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1
-```
+3. **Input the FEN into Fen2board**:
+   - Copy the desired FEN string from Lichess.
+   - Paste the FEN string into the input field on the Fen2board website.
+   - Click the "Submit" button to generate the visual representation of the chess position.
 
-3. Available commands:
-   - Enter moves in the format `e2e4`
-   - Type `board` to display current position
-   - Type `fen` to input a new position
-   - Type `exit` to quit
+## Example
 
-## FEN Format Explanation
+1. **Obtain FEN from [Lichess](https://lichess.org/analysis)**:
+   - After analyzing your game on Lichess, you find an interesting position and copy its FEN string, e.g., `rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1`.
 
-FEN strings consist of six fields, separated by spaces:
-1. Piece placement
-2. Active color (`w` or `b`)
-3. Castling availability
-4. En passant target square
-5. Halfmove clock
-6. Fullmove number
-
-Example FEN fields explained:
-```
-rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1
-|                                        | | |  | | |
-Piece placement -------------------------+ | |  | | |
-Active color (white) ---------------------+ |  | | |
-Castling availability ---------------------+  | | |
-En passant target square -------------------+ | |
-Halfmove clock -------------------------------+ |
-Fullmove number -------------------------------+
-```
-
-## Piece Notation
-
-- White pieces: `K`(King), `Q`(Queen), `R`(Rook), `B`(Bishop), `N`(Knight), `P`(Pawn)
-- Black pieces: `k`(King), `q`(Queen), `r`(Rook), `b`(Bishop), `n`(Knight), `p`(Pawn)
-- Empty squares: Numbers 1-8 representing consecutive empty squares
-
-## Example Session
-
-```
-Enter FEN position (or 'exit' to quit):
-rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1
-
-Current position:
-  a b c d e f g h
-8 r n b q k b n r 8
-7 p p p p p p p p 7
-6 . . . . . . . . 6
-5 . . . . . . . . 5
-4 . . . . . . . . 4
-3 . . . . . . . . 3
-2 P P P P P P P P 2
-1 R N B Q K B N R 1
-  a b c d e f g h
-
-Enter move (e.g., e2e4):
-e2e4
-
-Made move! New position:
-  a b c d e f g h
-8 r n b q k b n r 8
-7 p p p p p p p p 7
-6 . . . . . . . . 6
-5 . . . . . . . . 5
-4 . . . . P . . . 4
-3 . . . . . . . . 3
-2 P P P P . P P P 2
-1 R N B Q K B N R 1
-  a b c d e f g h
-```
-
-## Features In Detail
-
-### Move Validation
-- Basic piece movement rules
-- Pawn promotion
-- Castling (kingside and queenside)
-- En passant captures
-- Move counting
-- Turn tracking
-
-### Board Display
-- ASCII representation of the chess board
-- Current position display
-- Move history tracking
-- Clear piece representation
-
-### Error Handling
-- Invalid FEN detection
-- Illegal move prevention
-- Input validation
-- Clear error messages
-
-## Limitations
-
-- Does not validate check or checkmate
-- Basic move validation only
-- No move suggestion or analysis
-- No game save/load functionality
-- No PGN support
+2. **Visualize on Fen2board**:
+   - Paste the copied FEN into Fen2board's input field.
+   - Click "Submit" to see the starting position of a chess game displayed on the board.
 
 ## Contributing
 
-Feel free to submit issues and enhancement requests.
-gh 
+Contributions are welcome! If you'd like to contribute to Fen2board, please follow these steps:
+
+1. **Fork the Repository**:
+   - Navigate to the [Fen2board GitHub repository](https://github.com/souptik-samanta/Fen2board).
+   - Click on the "Fork" button to create a copy of the repository in your GitHub account.
+
+2. **Clone the Repository**:
+   - Clone the forked repository to your local machine using:
+     ```bash
+     git clone https://github.com/your-username/Fen2board.git
+     ```
+
+3. **Install Dependencies**:
+   - Navigate to the project directory:
+     ```bash
+     cd Fen2board
+     ```
+   - Install the required dependencies:
+     ```bash
+     npm install
+     ```
+
+4. **Make Changes**:
+   - Implement your features or fixes.
+
+5. **Submit a Pull Request**:
+   - Push your changes to your forked repository.
+   - Open a pull request to the main repository with a detailed description of your changes.
 
 ## License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the MIT License. See the [LICENSE](https://github.com/souptik-samanta/Fen2board/blob/main/LICENSE) file for details.
+
+---
+
+*Note: For more information on Lichess's open database and accessing game data, visit [Lichess Open Database](https://database.lichess.org/).* 
