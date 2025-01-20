@@ -1,32 +1,21 @@
 # Fen2board
 
-Fen2board is a web application that allows users to visualize chess positions from Forsyth–Edwards Notation (FEN) strings. This tool is particularly useful for chess enthusiasts who want to analyze specific positions or share them with others.
-
-## Features
-
-- **FEN Input**: Enter any valid FEN string to generate the corresponding chess board position.
-- **Interactive Board**: Visualize the chess board based on the provided FEN.
-- **Integration with Lichess**: Easily obtain FEN strings from your games on Lichess for analysis.
-
 ## Getting Started
 
-Follow these steps to use Fen2board:
+**Follow these steps to use Fen2board:**
 
 1. **Access the Application**:
    - Open your web browser and navigate to [Fen2board](https://f2b.souptiks.hackclub.app/).
 
-2. **Obtain FEN from Lichess**:
-   - Log in to your Lichess account.
-   - Navigate to your profile by clicking on your username at the top right corner.
-   - Select "Profile" from the dropdown menu.
-   - On your profile page, locate and click on "Chess Insights" on the right side of the screen.
-   - Within Chess Insights, you can analyze your games and obtain FEN strings for specific positions.
-     - For detailed guidance on using Lichess Chess Insights, refer to [The Ultimate Guide to Lichess Chess Insights](https://www.theschoolofrook.com/lichess-chess-insights/).
+2. **Obtain FEN from [Lichess](https://lichess.org/analysis)**:
+   - play some mvoes then copy the fen from below then paste in the fen box of website
 
 3. **Input the FEN into Fen2board**:
    - Copy the desired FEN string from Lichess.
    - Paste the FEN string into the input field on the Fen2board website.
    - Click the "Submit" button to generate the visual representation of the chess position.
+
+
 
 ## Example
 
@@ -36,6 +25,15 @@ Follow these steps to use Fen2board:
 2. **Visualize on Fen2board**:
    - Paste the copied FEN into Fen2board's input field.
    - Click "Submit" to see the starting position of a chess game displayed on the board.
+##f2b
+Fen2board is a web application that allows users to visualize chess positions from Forsyth–Edwards Notation (FEN) strings. This tool is particularly useful for chess enthusiasts who want to analyze specific positions or share them with others.
+
+## Features
+
+- **FEN Input**: Enter any valid FEN string to generate the corresponding chess board position.
+- **Interactive Board**: Visualize the chess board based on the provided FEN.
+
+
 
 ## Contributing
 
