@@ -46,7 +46,7 @@ Contributions are welcome! If you'd like to contribute to Fen2board, please foll
 2. **Clone the Repository**:
    - Clone the forked repository to your local machine using:
      ```bash
-     git clone https://github.com/your-username/Fen2board.git
+     git clone https://github.com/souptik-samanta/Fen2board.git
      ```
 
 3. **Install Dependencies**:
